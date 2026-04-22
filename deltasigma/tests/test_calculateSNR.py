@@ -46,6 +46,6 @@ class TestCalculateSNR(unittest.TestCase):
         """ Test that a paricular SNR is infinite. """
         N = self.N
         hwfft = np.zeros((N//2, ))
-        hwfft[512] = 1.0  # specially crafted to have Inf snr
+        hwfft[512] = 1.0  # specially crafted to have inf snr
         snr = ds.calculateSNR(hwfft[:N//2], 512)
-        self.assertEqual(snr, np.Inf)
+        self.assertEqual(snr, np.inf)
