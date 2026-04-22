@@ -93,4 +93,4 @@ def peakSNR(snr, amp):
         #plt.hold(True)
         plt.plot(dbv(amp), dbv(pred), '-', color='b')
         #plt.hold(hold)
-    return peak_snr, peak_amp
+    return peak_snr.item(), peak_amp
