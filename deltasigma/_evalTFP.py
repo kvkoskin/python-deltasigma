@@ -54,7 +54,7 @@ def evalTFP(Hs, Hz, f):
 
         .. math::
 
-            H(f) = H_s(j2\\pi f)\ H_z(e^{j2\\pi f})
+            H(f) = H_s(j2\\pi f)\\ H_z(e^{j2\\pi f})
 
         ``H`` has the same form as ``f``.
 

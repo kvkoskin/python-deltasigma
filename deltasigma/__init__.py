@@ -109,7 +109,7 @@ dependencies:
 
 -  *Platforms*: Linux, Mac OS X, Windows.
 
--  *Archs*: x86, x86\_64 and armf (arm with floating point unit).
+-  *Archs*: x86, x86\\_64 and armf (arm with floating point unit).
 
 Required dependencies
 ~~~~~~~~~~~~~~~~~~~~~
@@ -543,7 +543,7 @@ continuous time loop filter.
 First, a loop filter topology is selected among the Feed-Forward (FF) and Feedback (FB)
 structures. The feed-forward or feedback paths -- depending on the topology -- will be
 characterized by an unknown proportionality factor :math:`k_i`, for each of the
-:math:`i \in \\{0 \dots order\\}` branches.
+:math:`i \\in \\{0 \\dots order\\}` branches.
 
 .. image:: ../doc/_static/DS_equivalence_DT_CT.png
     :align: center
@@ -606,20 +606,20 @@ following as :math:`l[n]`, it is possible to write the equation:
 
 .. math::
 
-    [\\ l_0[n]\\; l_1[n]\\; \\dots \\; l_{order}[n]\\ ]\ K = l[n]
+    [\\ l_0[n]\\; l_1[n]\\; \\dots \\; l_{order}[n]\\ ]\\ K = l[n]
 
 Where we define the vector :math:`K` as:
 
 .. math::
 
-    K = [\\ k_0 \\; k_1 \\; \dots \\; k_{order}\\ ]^T
+    K = [\\ k_0 \\; k_1 \\; \\dots \\; k_{order}\\ ]^T
 
 In the ideal case, provided that the impulse responses have been evaluated for
 a sufficiently high number of points :math:`N` (:math:`N > order`), the
 equation has a exact solution, independently of :math:`N` [R2]_.
 
 In presence of non-idealities, it is possible to use Least Squares fitting to
-find the optimum :math:`\{k_i\}`.
+find the optimum :math:`\\{k_i\\}`.
 
 As discussed in [R3]_, this method is particularly sensitive to the value of
 :math:`N` in the non-ideal cases.
