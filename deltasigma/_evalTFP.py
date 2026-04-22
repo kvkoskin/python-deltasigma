@@ -54,7 +54,7 @@ def evalTFP(Hs, Hz, f):
 
         .. math::
 
-            H(f) = H_s(j2\\pi f)\ H_z(e^{j2\\pi f})
+            H(f) = H_s(j2\\pi f)\\ H_z(e^{j2\\pi f})
 
         ``H`` has the same form as ``f``.
 
@@ -162,7 +162,7 @@ def evalTFP(Hs, Hz, f):
                 H[i] = 0.
             else:
                 if np.sum(cancelz) < np.sum(cancel):
-                    H[i] = np.Inf
+                    H[i] = np.inf
                 else:
                     H[i] = evalRPoly(szeros, si, sk)*zi**np.sum(cancel) \
                            * evalRPoly(zzeros[~cancelz], zi, zk) \

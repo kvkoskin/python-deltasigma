@@ -72,7 +72,7 @@ def peakSNR(snr, amp):
     min_i = np.min(i)
     max_i = np.max(i)
     j = np.flatnonzero(snr[min_i:max_i + 1] < max_snr - 15)
-    if j:
+    if j.size > 0:
         max_i = min_i + np.min(j) - 2
         i = np.arange(min_i, max_i + 1)
     snr = 10.0**(snr[i]/20)
@@ -93,4 +93,4 @@ def peakSNR(snr, amp):
         #plt.hold(True)
         plt.plot(dbv(amp), dbv(pred), '-', color='b')
         #plt.hold(hold)
-    return peak_snr, peak_amp
+    return peak_snr.item(), peak_amp

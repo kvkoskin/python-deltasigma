@@ -43,7 +43,7 @@ def ds_hann(n):
 
     .. note:: Functionally equivalent to numpy's ``hanning()``, provided
         to ease porting of code from MATLAB. Also, we take care always to
-        return an array of dimensions ``(n,)`` and type ``float_``.
+        return an array of dimensions ``(n,)`` and type ``np.double``.
 
     .. plot::
 
@@ -60,5 +60,5 @@ def ds_hann(n):
       plt.ylabel("Value")
 
     """
-    x = np.arange(n, dtype='float_')
+    x = np.arange(n, dtype=np.double)
     return .5*(1 - np.cos(2*np.pi*x/n))
